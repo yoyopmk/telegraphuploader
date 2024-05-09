@@ -12,9 +12,9 @@ const telegraphClient = new telegraph();
 const botToken = process.env.BOT_TOKEN;
 
 // Set up the telegraph client with the API credentials
-const authorName = 'UploaderBot'; // Change this if needed
+const authorName = 'laksh-botto-nny'; // Change this if needed
 telegraphClient.createAccount({
-    short_name: 'UploaderBot',
+    short_name: 'laksh-botto-nny',
     author_name: authorName
 })
 .then(account => console.log('Telegraph account created:', account))
