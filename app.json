@@ -1,0 +1,45 @@
+{
+  "name": "telegram-bot-uploader",
+  "description": "A Telegram bot to upload files to Telegraph and return the link to the user.",
+  "keywords": ["telegram", "bot", "uploader", "telegraph"],
+  "repository": "https://github.com/yourusername/telegram-bot-uploader",
+  "logo": "https://example.com/logo.png",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Telegram bot token",
+      "required": true
+    },
+    "APP_ID": {
+      "description": "Telegraph app ID",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Telegraph API hash",
+      "required": true
+    }
+  },
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "scripts": {
+    "start": "node index.js"
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "environments": {
+    "test": {
+      "env": {
+        "NODE_ENV": "test"
+      }
+    }
+  }
+}
